@@ -1,7 +1,6 @@
 package com.arthlimchiu.componentdependencies.di
 
-import com.arthlimchiu.componentdependencies.repos.ReposSubcomponent
-import com.arthlimchiu.componentdependencies.userdetails.UserDetailsSubcomponent
+import com.arthlimchiu.componentdependencies.Api
 import dagger.Component
 import javax.inject.Singleton
 
@@ -13,7 +12,5 @@ import javax.inject.Singleton
 )
 interface AppComponent {
 
-    fun userDetailsSubcomponent(): UserDetailsSubcomponent.Builder
-
-    fun reposSubcomponent(): ReposSubcomponent.Builder
+    fun api(): Api
 }

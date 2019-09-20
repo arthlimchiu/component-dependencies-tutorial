@@ -24,8 +24,9 @@ class ReposActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_repos)
 
-        val component = appComponent
-            .reposSubcomponent()
+        val component = DaggerReposComponent
+            .builder()
+            .appComponent(appComponent)
             .build()
         component.inject(this)
 

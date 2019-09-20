@@ -23,8 +23,9 @@ class UserDetailsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_user_details)
 
-        val component = appComponent
-                .userDetailsSubcomponent()
+        val component = DaggerUserDetailsComponent
+                .builder()
+                .appComponent(appComponent)
                 .build()
         component.inject(this)
 
